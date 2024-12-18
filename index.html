@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    
+    <title>Addition Game 2</title>
+    <style>
+        *{
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+        }
+        body {
+            width: 100dvw;
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: rgb(231, 231, 231);
+        }
+
+        canvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        button{
+            background-image: url(./btn/game_open_1_2.png);
+            background-size: cover;
+            width: 8vw;
+            height: 8vw;
+            border-radius: 10vw;
+            font-size: 1.1vw;
+            text-align: center;
+            background-color: transparent;
+            border: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(33, 36, 58);
+            z-index: 1;
+            position: absolute;
+            top:50%;left:50%;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="font-size: 4vw;font-family: 'Kavoon';">Loading ..</p>
+    <canvas></canvas>
+    <script>
+        let start = false;
+        let clicked=false;
+        const canvas = document.querySelector('canvas');
+        canvas.width = 1280
+        canvas.height = 786
+        const ctx = canvas.getContext('2d');
+        let audio = new Audio('./speech/sea.mp3');
+        audio.volume =0.1;
+
+
+    </script>
+    <script src="./js/fish.js"></script>
+    <script src="./js/bg.js"></script>
+    <script src="./js/coin.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src="./js/bar.js"></script>
+    <script src="./js/box.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
